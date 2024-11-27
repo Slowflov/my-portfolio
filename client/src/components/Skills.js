@@ -12,7 +12,7 @@ function Skills() {
     { name: "Node.js", level: 10, size: "medium", position: { bottom: "12%", right: "25%" } },
     { name: "Tailwind", level: 12, size: "medium", position: { top: "48%", right: "13%" } },
     { name: "Sass", level: 15, size: "small", position: { bottom: "10%", left: "40%" } },
-    { name: "MongoDB", level: 11, size: "small", position: { top: "75%", right: "80%" } },
+    { name: "MongoDB", level: 11, size: "small", position: { top: "75%", right: "74%" } },
     { name: "Rest API", level: 13, size: "medium", position: { bottom: "64%", right: "53%" } },
   ];
 
@@ -38,8 +38,8 @@ function Skills() {
       <img
         src={MySkills}
         alt="A developer with an idea"
-        className="absolute left-1/2 bottom-24 transform -translate-x-1/2"
-        style={{ width: "460px", height: "420px" }} // Размер изображения
+        className="absolute left-1/2 bottom-[200px] transform -translate-x-1/2"
+        style={{ width: "750px", height: "800px" }} // Размер изображения
       />
 
       {/* Отображаем пузырьки с навыками */}

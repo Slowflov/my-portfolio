@@ -7,6 +7,7 @@ module.exports = {
   theme: {
     extend: {
       screens: {
+        'xsm': {'max': '399px'},
       },
       animation: {
         'slow-pulse': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
