@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import SkillBubble from "./SkillBubble";
+import SkillInfo from "./SkillInfo"; // Импортируем новый компонент
 import MySkills from "../assets/skills.png";  // Путь к вашей картинке
 
 function Skills() {
@@ -10,16 +11,18 @@ function Skills() {
   };
 
   const skills = [
-    { name: "React", level: 8, size: "large", position: { top: "14%", left: "75%" } },
-    { name: "HTML", level: 18, size: "small", position: { top: "29%", left: "58%" } },
-    { name: "CSS", level: 14, size: "medium", position: { top: "60%", left: "25%" } },
-    { name: "JavaScript", level: 11, size: "large", position: { top: "46%", right: "45%" } },
+    { name: "React", level: 12, size: "large", position: { top: "11%", left: "75%" } },
+    { name: "HTML", level: 18, size: "small", position: { top: "31%", left: "63%" } },
+    { name: "CSS", level: 14, size: "medium", position: { top: "60%", left: "28%" } },
+    { name: "JavaScript", level: 11, size: "large", position: { top: "48%", right: "45%" } },
     { name: "Redux", level: 12, size: "small", position: { bottom: "44%", left: "15%" } },
-    { name: "Node.js", level: 10, size: "medium", position: { bottom: "12%", right: "25%" } },
+    { name: "Node.js", level: 10, size: "medium", position: { bottom: "12%", right: "29%" } },
     { name: "Tailwind", level: 12, size: "medium", position: { top: "48%", right: "13%" } },
-    { name: "Sass", level: 15, size: "small", position: { bottom: "10%", left: "40%" } },
-    { name: "MongoDB", level: 11, size: "small", position: { top: "75%", right: "74%" } },
-    { name: "Rest API", level: 13, size: "medium", position: { bottom: "64%", right: "53%" } },
+    { name: "Sass", level: 16, size: "small", position: { bottom: "10%", left: "40%" } },
+    { name: "MongoDB", level: 15, size: "small", position: { top: "75%", right: "74%" } },
+    { name: "Rest API", level: 13, size: "medium", position: { bottom: "62%", right: "50%" } },
+    { name: "Git", level: 11, size: "medium", position: { top: "15%", left: "20%" } },
+    { name: "Postman", level: 14, size: "small", position: { bottom: "30%", left: "70%" } },
   ];
 
   return (
@@ -27,30 +30,16 @@ function Skills() {
       id="skills"
       className="h-screen bg-gradient-to-b from-[#14213d] to-[#751dda] relative"
     >
-      <div className="absolute top-12 left-16 text-white">
-        <div className="text-sm font-semibold text-purple-800">Skills &lt;/</div>
-        <div className="text-md mt-1 text-gray-400">Programming Languages /</div>
-        <div className="text-md mt-1 text-gray-400 inline-block">
-          <span>Management/Hobbies</span>
-          <div className="border-t-[0.5px] border-white mt-4"></div>
-        </div>
-      </div>
-
+      {/* Используем новый компонент */}
+      <SkillInfo onClick={handleButtonClick} showInfo={showInfo} />
+      
       {/* Картинка */}
       <img
         src={MySkills}
         alt="A developer with an idea"
         className="absolute left-1/2 bottom-[200px] transform -translate-x-1/2"
-        style={{ width: "750px", height: "800px" }}
+        style={{ width: "750px", height: "800px", pointerEvents: "none" }}
       />
-
-      {/* Добавляем кнопку для управления панелью */}
-      <button
-        className="absolute top-10 right-10 p-3 rounded-full bg-blue-500 text-white"
-        onClick={handleButtonClick}
-      >
-        {showInfo ? "Hide Info" : "Show Info"}
-      </button>
 
       {/* Отображаем пузырьки с навыками */}
       {skills.map((skill, index) => (
@@ -69,6 +58,8 @@ function Skills() {
 }
 
 export default Skills;
+
+
 
 
 

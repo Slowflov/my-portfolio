@@ -1,5 +1,5 @@
 import React from "react";
-import { FaReact, FaHtml5, FaCss3Alt, FaJsSquare, FaNodeJs } from "react-icons/fa";
+import { FaReact, FaHtml5, FaCss3Alt, FaJsSquare, FaNodeJs, FaGithub } from "react-icons/fa"; // добавили FaGithub для Git
 import { SiRedux, SiTailwindcss, SiSass, SiMongodb } from "react-icons/si"; // Импорт MongoDB
 import { TbApi } from "react-icons/tb"; // Импорт Rest API
 
@@ -26,6 +26,10 @@ const SkillBubble = ({ skill, level, size, style, syntaxName, showInfo }) => {
         return <SiMongodb className="text-5xl text-green-600" />;
       case "Rest API":
         return <TbApi className="text-5xl text-gray-500" />;
+      case "Git":
+        return <FaGithub className="text-5xl text-black" />;  // Иконка для Git
+      case "Postman":
+        return <TbApi className="text-5xl text-orange-500" />; // Можно заменить на более подходящую иконку для Postman
       default:
         return <FaReact className="text-5xl text-white" />;
     }
@@ -43,7 +47,8 @@ const SkillBubble = ({ skill, level, size, style, syntaxName, showInfo }) => {
   return (
     <div
       style={style}
-      className={`relative flex items-center justify-center ${bubbleSize} bg-gradient-to-br from-[#5c9ead]/75 to-[#702963]/75 rounded-full shadow-lg hover:shadow-2xl hover:scale-110 transition-transform duration-300 group z-50`}
+      className={`relative flex items-center justify-center ${bubbleSize} bg-gradient-to-br from-[#5c9ead]/75 to-[#702963]/75 rounded-full shadow-lg hover:shadow-2xl transition-all duration-300 group z-60 hover:scale-125 hover:shadow-[0_0_15px_5px_rgba(255,255,255,0.6)]`}
+
     >
       {/* Пузырь с анимацией пульсации */}
       <div className="relative animate-slow-pulse">{renderIcon()}</div>
@@ -79,7 +84,7 @@ const SkillBubble = ({ skill, level, size, style, syntaxName, showInfo }) => {
 
       {/* Информационный бар */}
       <div
-        className={`absolute -top-[65px] z-40 left-2/2 transform -translate-x-1/2 w-32 h-14 bg-[#04192e] bg-opacity-80 p-2 flex flex-col items-center justify-start ${showInfo ? "flex" : "hidden"} group-hover:flex clip-path-polygon-[0%_0%,_95%_0%,_100%_100%,_5%_92%]`}
+        className={`absolute -top-[65px] z-50 left-2/2 transform -translate-x-1/2 w-32 h-14 bg-[#04192e] bg-opacity-80 p-2 flex flex-col items-center justify-start ${showInfo ? "flex" : "hidden"} group-hover:flex clip-path-polygon-[0%_0%,_95%_0%,_100%_100%,_5%_92%] shadow-[0_0_60px_25px_rgba(255,255,255,0.5)]`}
       >
         {/* Текст Level сверху без отступов */}
         <div className="text-white text-[10px] font-medium text-left w-full">Level</div>
