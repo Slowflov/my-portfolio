@@ -10,7 +10,7 @@ This is my portfolio made with taste.
 - Express
 - Rest api
 
-
+---------------------------------------------------------------------------
 
 # Back-end
 
@@ -19,7 +19,12 @@ This is my portfolio made with taste.
 # MiniMap - My Location Tracker
 
 ## Description
-MiniMap - is an application for displaying my location on a map using browser geolocation. It uses the Leaflet library to display the map and shows the point of my location with a custom marker.
+MiniMap is a feature of my portfolio that displays my location on a map using the browser's geolocation API. It leverages the Leaflet library to render the map and shows my location with a custom marker. This feature demonstrates my ability to work with geolocation data, interactive maps, and the integration of front-end libraries like Leaflet to create dynamic, location-based visualizations.
+
+---------------------------------------------------------------------------
+
+## Live Demo
+You can view the live version of this portfolio at [https://my-portfolio-gm61.onrender.com](https://my-portfolio-gm61.onrender.com).
 
 ## Installation
 
