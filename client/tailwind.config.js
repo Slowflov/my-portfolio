@@ -7,7 +7,8 @@ module.exports = {
   theme: {
     extend: {
       screens: {
-        'xsm': {'max': '399px'},
+        'xsm': {'max': '400px'},
+        'xxs': {'max': '640px'},
       },
       animation: {
         'slow-pulse': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',

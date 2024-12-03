@@ -36,18 +36,18 @@ const SkillBubble = ({ skill, level, size, style, syntaxName, showInfo }) => {
   };
 
   const bubbleSize =
-    size === "large"
-      ? "w-32 h-32"
-      : size === "medium"
-      ? "w-28 h-28"
-      : size === "small"
-      ? "w-24 h-24"
-      : "w-28 h-28";
+  size === "large"
+    ? "w-32 h-32 xxs:w-28 xxs:h-28"  // Для экранов до 640px будет уменьшено
+    : size === "medium"
+    ? "w-28 h-28 xxs:w-24 xxs:h-24"  // Для экранов до 640px будет уменьшено
+    : size === "small"
+    ? "w-24 h-24 xxs:w-20 xxs:h-20"  // Для экранов до 640px будет уменьшено
+    : "w-28 h-28 xxs:w-24 xxs:h-24";  // Для экранов до 640px будет уменьшено
 
   return (
     <div
       style={style}
-      className={`relative flex items-center justify-center ${bubbleSize} bg-gradient-to-br from-[#5c9ead]/75 to-[#702963]/75 rounded-full shadow-lg hover:shadow-2xl transition-all duration-300 group z-60 hover:scale-125 hover:shadow-[0_0_15px_5px_rgba(255,255,255,0.6)]`}
+      className={`relative flex items-center justify-center ${bubbleSize} bg-gradient-to-br from-[#5c9ead]/75 to-[#702963]/75 rounded-full shadow-lg hover:shadow-2xl transition-all duration-300 group z-60 hover:scale-125 xxs:hover:scale-110 hover:shadow-[0_0_15px_5px_rgba(255,255,255,0.6)]`}
 
     >
       {/* Пузырь с анимацией пульсации */}

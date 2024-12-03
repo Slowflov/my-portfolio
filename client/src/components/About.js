@@ -61,8 +61,7 @@ function About() {
             <h3 className="text-3xl xsm:text-2xl sm:text-3xl md:text-4xl">I AM A WEB DEVELOPER</h3>
             <h4 className="text-3xl xsm:text-2xl font-medium">About</h4>
             <p className="max-w-2xl xsm:text-2xl mx-auto text-3xl sm:text-3xl md:text-4xl text-gray-300">
-              I completed a course at OpenClassroom and continue to develop myself in web development.
-              I am passionate about creating modern, responsive, and user-friendly web applications.
+            I am passionate about web development, continuously working on improving my skills. I specialize in building modern, responsive, and user-friendly web applications. My goal is to create seamless digital experiences that meet both functional and aesthetic needs.
             </p>
           </div>
         )}
