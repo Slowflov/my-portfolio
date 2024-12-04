@@ -45,11 +45,15 @@ const SkillBubble = ({ skill, level, size, style, syntaxName, showInfo }) => {
     : "w-28 h-28 xxs:w-24 xxs:h-24";  // Для экранов до 640px будет уменьшено
 
   return (
-    <div
-      style={style}
-      className={`relative flex items-center justify-center ${bubbleSize} bg-gradient-to-br from-[#5c9ead]/75 to-[#702963]/75 rounded-full shadow-lg hover:shadow-2xl transition-all duration-300 group z-60 hover:scale-125 xxs:hover:scale-110 hover:shadow-[0_0_15px_5px_rgba(255,255,255,0.6)]`}
-
-    >
+<div
+  className={`absolute flex items-center justify-center ${bubbleSize} bg-gradient-to-br from-[#5c9ead]/75 to-[#702963]/75 rounded-full shadow-lg transition-all duration-300 group z-60 hover:scale-125 xxs:hover:scale-110 hover:shadow-[0_0_15px_5px_rgba(255,255,255,0.6)]`}
+  style={{
+    top: style?.top || "auto",
+    left: style?.left || "auto",
+    right: style?.right || "auto",
+    bottom: style?.bottom || "auto",
+  }}
+>
       {/* Пузырь с анимацией пульсации */}
       <div className="relative animate-slow-pulse">{renderIcon()}</div>
 

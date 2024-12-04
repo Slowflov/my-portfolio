@@ -13,7 +13,7 @@ function Skills() {
   return (
     <section
       id="skills"
-      className="h-screen bg-gradient-to-b from-[#14213d] to-[#751dda] relative"
+      className="h-screen bg-gradient-to-b from-[#14213d] to-[#751dda] relative overflow-hidden"
     >
       {/* Компонент для отображения информации */}
       <SkillInfo onClick={handleButtonClick} showInfo={showInfo} />
@@ -22,8 +22,8 @@ function Skills() {
       <img
         src={MySkills}
         alt="A developer with an idea"
-        className="absolute left-1/2 bottom-[200px] transform -translate-x-1/2"
-        style={{ width: "750px", height: "800px", pointerEvents: "none" }}
+        className="absolute left-1/2 bottom-[200px] transform -translate-x-1/2 object-contain"
+        style={{ width: "950px", height: "900px", pointerEvents: "none" }}
       />
 
       {/* Облако навыков с пузырями */}
@@ -33,6 +33,7 @@ function Skills() {
 }
 
 export default Skills;
+
 
 
 
