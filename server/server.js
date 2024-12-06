@@ -11,7 +11,7 @@ app.use(express.json());
 // Endpoint для возврата координат
 app.get("/api/location", (req, res) => {
     res.json({
-        latitude: 48.8566, // Пример: Париж
+        latitude: 48.8566,
         longitude: 2.3522,
     });
 });

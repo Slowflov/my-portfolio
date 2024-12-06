@@ -6,7 +6,6 @@ const useWindowWidth = () => {
   useEffect(() => {
     const handleResize = () => {
       const actualWidth = window.innerWidth;
-      console.log("Window resized to:", actualWidth); // Логируем изменяющуюся ширину
       setWidth(actualWidth);
     };
 
@@ -16,8 +15,6 @@ const useWindowWidth = () => {
       window.removeEventListener("resize", handleResize);
     };
   }, []);
-
-  console.log("Final width inside hook:", width); // Лог текущей ширины экрана внутри хука
 
   return width;
 };

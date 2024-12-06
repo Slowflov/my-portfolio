@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import SkillInfo from "./SkillInfo"; // Компонент с информацией
 import SkillCloud from "./SkillCloud"; // Новый компонент для облака навыков
-import MySkills from "../assets/skills.png";  // Путь к картинке
+import MySkills from "../../assets/skills.png";  // Путь к картинке
 
 function Skills() {
   const [showInfo, setShowInfo] = useState(false); // Состояние для отображения панели
@@ -13,7 +13,7 @@ function Skills() {
   return (
     <section
       id="skills"
-      className="h-screen bg-gradient-to-b from-[#14213d] to-[#751dda] relative overflow-hidden"
+      className="h-screen bg-gradient-to-b from-[#14213d] to-[#264653] relative overflow-hidden"
     >
       {/* Компонент для отображения информации */}
       <SkillInfo onClick={handleButtonClick} showInfo={showInfo} />

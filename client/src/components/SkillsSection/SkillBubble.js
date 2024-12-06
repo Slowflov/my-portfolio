@@ -88,7 +88,7 @@ const SkillBubble = ({ skill, level, size, style, syntaxName, showInfo }) => {
 
       {/* Информационный бар */}
       <div
-        className={`absolute -top-[65px] z-50 left-2/2 transform -translate-x-1/2 w-32 h-14 bg-[#04192e] bg-opacity-80 p-2 flex flex-col items-center justify-start ${showInfo ? "flex" : "hidden"} group-hover:flex clip-path-polygon-[0%_0%,_95%_0%,_100%_100%,_5%_92%] shadow-[0_0_60px_25px_rgba(255,255,255,0.5)]`}
+        className={`absolute -top-[65px] z-70 left-2/2 transform -translate-x-1/2 w-32 h-14 bg-[#04192e] bg-opacity-80 p-2 flex flex-col items-center justify-start ${showInfo ? "flex" : "hidden"} group-hover:flex clip-path-polygon-[0%_0%,_95%_0%,_100%_100%,_5%_92%] shadow-[0_0_60px_25px_rgba(255,255,255,0.5)]`}
       >
         {/* Текст Level сверху без отступов */}
         <div className="text-white text-[10px] font-medium text-left w-full">Level</div>

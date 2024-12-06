@@ -1,9 +1,9 @@
 import React from 'react';
 import './index.css';
-import About from './components/About';
-import Skills from './components/Skills';
+import About from './components/AboutSection/About';
+import Skills from './components/SkillsSection/Skills';
 import Projects from './components/Projects';
-import Contact from './components/Contact';
+import Contact from './components/ContactSection/Contact';
 
 function App() {
   return (

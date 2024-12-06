@@ -1,14 +1,11 @@
 import React from "react";
 import SkillBubble from "./SkillBubble"; // Компонент пузыря с навыками
-import useWindowWidth from "../hook/useWindowWidth";
+import useWindowWidth from "../../hook/useWindowWidth";
 
 const SkillCloud = ({ showInfo }) => {
   const screenWidth = useWindowWidth();
 
-  console.log("SkillCloud Current screen width:", screenWidth); // Лог текущей ширины экрана в SkillCloud
-
   const getPosition = (position) => {
-    console.log("Checking screen width in getPosition:", screenWidth); // Проверка ширины внутри getPosition
     if (screenWidth >= 1024) return position.lg;
     if (screenWidth >= 768) return position.md;
     if (screenWidth >= 640) return position.sm;
