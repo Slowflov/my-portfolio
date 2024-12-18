@@ -1,9 +1,9 @@
 import React from 'react';
-import Photorest from "../assets/ohmyfood.png";
-import Photoroom from "../assets/room.jpg";
-import Photobank from "../assets/Bank.png";
-import PhotoSophie from "../assets/Sophie.png";
-import Agence from "../assets/agence.png";
+import Photorest from "../../assets/ohmyfood.png";
+import Photoroom from "../../assets/room.jpg";
+import Photobank from "../../assets/Bank.png";
+import PhotoSophie from "../../assets/Sophie.png";
+import Agence from "../../assets/agence.png";
 import ProjectCard from './ProjectCard';
 
 function Projects() {

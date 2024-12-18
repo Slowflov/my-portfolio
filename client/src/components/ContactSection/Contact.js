@@ -3,7 +3,7 @@ import React from 'react';
 import { FaLinkedin, FaGithub, FaInfoCircle } from 'react-icons/fa';
 import { SiMonster } from 'react-icons/si';  // Иконка Monster
 import ContactForm from './ContactForm'; // Импортируем компонент формы
-import MiniMap from '../MiniMap';  // Импорт компонента карты
+import MiniMap from '../ContactSection/MiniMap';  // Импорт компонента карты
 
 const Contact = () => {
   return (

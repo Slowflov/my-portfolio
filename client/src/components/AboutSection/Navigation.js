@@ -2,7 +2,7 @@ import React from 'react';
 import { FaGithub, FaLinkedin, FaInfoCircle } from 'react-icons/fa';
 import { SiMonster } from "react-icons/si";
 
-import logo from '../../assets/pngwin.png';
+import logo from '../../assets/pngwin.webp';
 
 function Navigation() {
   return (

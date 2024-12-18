@@ -1,15 +1,15 @@
 // src/components/AboutSection/Photo.js
 import React from 'react';
-import Myphoto from '../../assets/Myphot.jpg';
+import Myphoto from '../../assets/Myphot.webp';
 
 function Photo() {
   return (
     <>
-      {/* Фото с рамкой */}
+      {/* Фото с рамкой для мобильных и планшетных экранов */}
       <div className="absolute top-[-30px] right-0 w-full h-screen z-0 flex justify-end items-center mr-16 xxl:hidden">
         <img
           src={Myphoto}
-          alt="A developer with an idea"
+          alt="Sitting next to the Eiffel Tower in Paris, enjoying a moment of serenity in one of the most iconic cities in the world."
           className="w-[400px] h-[400px] shadow-lg sm:w-[350px] sm:h-[350px] md:w-[340px] md:h-[350px] lg:w-[400px] lg:h-[400px]"
           style={{
             clipPath: "polygon(0% 0%, 95% 0%, 100% 100%, 9% 89%)",
@@ -19,24 +19,27 @@ function Photo() {
             transformOrigin: "center",
             pointerEvents: "none"
           }}
+          loading="lazy"  // Ленивый лоадинг
         />
       </div>
 
-{/* Используем relative позиционирование для контейнера */}
-<div className="relative mb-14 ml-6 w-[350px] h-[350px] mt-10 z-0 flex justify-center items-end hidden xxl:block">
-  <img
-    src={Myphoto}
-    alt="A developer with an idea"
-    className="w-full h-full object-cover object-center pointer-events-none"
-    style={{
-      clipPath: "polygon(0% 0%, 95% 0%, 100% 100%, 9% 89%)"
-    }}
-  />
-</div>
-
-
+      {/* Фото с рамкой для больших экранов */}
+      <div className="relative mb-14 ml-6 w-[350px] h-[350px] mt-10 z-0 flex justify-center items-end hidden xxl:block">
+        <img
+          srcSet={`${Myphoto}?w=300 300w, ${Myphoto}?w=600 600w, ${Myphoto}?w=900 900w`} // Использование srcSet для разных разрешений
+          sizes="(max-width: 600px) 300px, (max-width: 1200px) 600px, 900px" // Размеры в зависимости от ширины экрана
+          src={Myphoto} // Задать основной источник изображения
+          alt="Sitting next to the Eiffel Tower in Paris, enjoying a moment of serenity in one of the most iconic cities in the world."
+          className="w-full h-full object-cover object-center pointer-events-none"
+          style={{
+            clipPath: "polygon(0% 0%, 95% 0%, 100% 100%, 9% 89%)"
+          }}
+          loading="lazy"  // Ленивый лоадинг
+        />
+      </div>
     </>
   );
 }
 
 export default Photo;
+
