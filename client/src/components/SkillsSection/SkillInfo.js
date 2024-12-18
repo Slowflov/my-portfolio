@@ -1,5 +1,5 @@
 const SkillInfo = ({ onClick, showInfo }) => (
-    <div className="absolute top-[240px] left-[70px] lg:top-[310px] lg:left-[190px] md:top-[250px] md:left-[90px] sm:top-[240px] sm:left-[60px] xsm:top-[220px] xsm:left-[30px] text-white">
+    <div className="absolute top-[200px] left-6 sm:left-10 text-white font-semibold text-xs sm:text-base md:text-xl lg:text-2xl xl:text-xl">
       <div className="text-xl xxs:text-lg font-semibold text-[#c8ced4]">Skills &lt;/</div>
       <div className="text-xl xxs:text-lg mt-2 text-gray-400">Programming Languages /</div>
       <div className="text-xl xxs:text-lg mt-1 text-gray-400 inline-block">

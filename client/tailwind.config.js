@@ -5,6 +5,10 @@ module.exports = {
   ],
   theme: {
     extend: {
+      colors: {
+        customWhiteblue: '#264653',
+        customDarkblue: '#04192e',
+      },
       screens: {
         'xxl': {'max': '900px'},
         'xsm': {'max': '400px'},

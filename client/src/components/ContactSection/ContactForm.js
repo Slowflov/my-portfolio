@@ -70,7 +70,7 @@ const ContactForm = () => {
           value={formData.name}
           onChange={handleChange}
           placeholder="Name"
-          className="w-1/2 p-2 border border-gray-300 rounded"
+          className="w-1/2 p-2 border border-customWhiteblue rounded"
         />
         {/* Поле Email */}
         <input
@@ -79,7 +79,7 @@ const ContactForm = () => {
           value={formData.email}
           onChange={handleChange}
           placeholder="Email"
-          className="w-1/2 p-2 border border-gray-300 rounded"
+          className="w-1/2 p-2 border border-customWhiteblue rounded"
         />
       </div>
 
@@ -90,7 +90,7 @@ const ContactForm = () => {
         value={formData.subject}
         onChange={handleChange}
         placeholder="Subject"
-        className="w-full p-2 border border-gray-300 rounded"
+        className="w-full p-2 border border-customWhiteblue rounded"
       />
 
       {/* Поле Message */}
@@ -99,16 +99,32 @@ const ContactForm = () => {
         value={formData.message}
         onChange={handleChange}
         placeholder="Message"
-        className="w-full p-2 border border-gray-300 rounded h-32"
+        className="w-full p-2 border border-customWhiteblue rounded h-32"
       />
 
       {/* Кнопка отправки */}
       <button
-        type="submit"
-        className="self-start bg-blue-500 text-white px-6 py-2 rounded hover:bg-blue-600"
-      >
-        SEND A MESSAGE
-      </button>
+  type="submit"
+  className="self-start bg-customWhiteblue text-gray-300 px-2 py-2 rounded hover:bg-customDarkblue flex items-center"
+>
+  SEND A MESSAGE
+  <div className="ml-3 w-6 h-6 border-2 border-white rounded-full flex justify-center items-center">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      className="w-6 h-6 text-gray-300"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth={2}
+    >
+      {/* Стрелка вправо */}
+      <line x1="6" y1="12" x2="18" y2="12" stroke="currentColor" strokeWidth="2" />
+      <line x1="13" y1="7" x2="18" y2="12" stroke="currentColor" strokeWidth="2" />
+      <line x1="13" y1="17" x2="18" y2="12" stroke="currentColor" strokeWidth="2" />
+    </svg>
+  </div>
+</button>
+
     </form>
   );
 };

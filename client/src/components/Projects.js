@@ -2,6 +2,8 @@ import React from 'react';
 import Photorest from "../assets/ohmyfood.png";
 import Photoroom from "../assets/room.jpg";
 import Photobank from "../assets/Bank.png";
+import PhotoSophie from "../assets/Sophie.png";
+import Agence from "../assets/agence.png";
 import ProjectCard from './ProjectCard';
 
 function Projects() {
@@ -9,7 +11,7 @@ function Projects() {
     <section id="projects" className="p-10 bg-gradient-to-r from-[#264653] to-[#14213d] flex flex-col items-end min-h-screen relative">
       
       {/* Текст с бордером */}
-      <div className="absolute top-[200px] left-2 sm:left-10 text-white font-semibold text-xs sm:text-base md:text-xl lg:text-2xl xl:text-xl">
+      <div className="absolute top-[200px] left-5 sm:left-10 text-white font-semibold text-xs sm:text-base md:text-xl lg:text-2xl xl:text-xl xsm:top-[80px]">
         <div>
           <span className="text-[#04192e]">Projects </span>
           <span className="text-[#04192e]">&gt; </span>
@@ -44,7 +46,7 @@ function Projects() {
         image={Photoroom}
         link="https://slowflov.github.io/project7/#/"
         description="Real estate and hotel properties showcase"
-        className="mr-[60px] md:mr-[120px] xsm:mr-[40px] mt-[-50px]"
+        className="mr-[30px] md:mr-[70px] xsm:mr-[30px] mt-[-125px]"
         style={{
           boxShadow: '12px -11px 15px 2px rgba(0, 0, 0, 0.7)',
         }}
@@ -54,20 +56,42 @@ function Projects() {
       <ProjectCard
         title="Banking application"
         image={Photobank}
-        link="https://slowflov.github.io/project4/index.html#"
+        link="https://bankking.netlify.app/"
         description="Screenshot of a banking application interface"
-        className="mr-[130px] md:mr-[240px] xsm:mr-[110px] mt-[-50px]"
+        className="mr-[70px] md:mr-[140px] xsm:mr-[50px] mt-[-125px]"
+        style={{
+          boxShadow: '12px -11px 15px 2px rgba(0, 0, 0, 0.7)',
+        }}
+      />
+       {/* Четвертый блок */}
+       <ProjectCard
+        title="Architecxte d’intérieur"
+        image={PhotoSophie}
+        link="https://slowflov.github.io/Portfolio-architecte-sophie-bluel/index.html"
+        description="Screenshot of a banking application interface"
+        className="mr-[110px] md:mr-[200px] xsm:mr-[70px] mt-[-125px]"
+        style={{
+          boxShadow: '12px -11px 15px 2px rgba(0, 0, 0, 0.7)',
+        }}
+      />
+             {/* пятый блок */}
+             <ProjectCard
+        title="Agence d'événementiel"
+        image={Agence}
+        link="https://events72.netlify.app/"
+        description="Screenshot of a banking application interface"
+        className="mr-[140px] md:mr-[260px] xsm:mr-[90px] mt-[-125px]"
         style={{
           boxShadow: '12px -11px 15px 2px rgba(0, 0, 0, 0.7)',
         }}
       />
 
-      {/* Четвертый блок */}
+      {/* шестой блок */}
       <a
         href="https://slowflov.github.io/project4/index.html#"
         target="_blank"
         rel="noopener noreferrer"
-        className="block w-7/12 max-w-4xl bg-black overflow-hidden cursor-pointer relative hover:scale-105 hover:z-10 transition-all duration-300 mr-[170px] md:mr-[320px] xsm:mr-[150px] mt-[-50px]"
+        className="block w-7/12 max-w-4xl bg-black overflow-hidden cursor-pointer relative hover:scale-105 hover:z-10 transition-all duration-300 mr-[170px] md:mr-[320px] xsm:mr-[110px] mt-[-125px]"
         style={{
           boxShadow: '12px -11px 15px 2px rgba(0, 0, 0, 0.7)',
         }}
@@ -90,7 +114,7 @@ function Projects() {
           </div>
         </div>
         <div className="w-full h-60 bg-black flex items-center justify-center">
-          <span className="text-white text-2xl font-bold">in development</span>
+          <span className="text-white text-2xl xsm:text-lg font-bold">in development</span>
         </div>
       </a>
     </section>

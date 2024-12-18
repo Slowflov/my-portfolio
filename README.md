@@ -1,7 +1,7 @@
 # My-portfolio
 
 ## Description
-This is my portfolio made with taste.
+This is my portfolio.
 
 ## Technologies
 - React
@@ -9,6 +9,9 @@ This is my portfolio made with taste.
 - Node.js
 - Express
 - Rest api
+
+# Front-end
+
 
 ---------------------------------------------------------------------------
 

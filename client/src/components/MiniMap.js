@@ -14,8 +14,8 @@ function MiniMap() {
 
     return (
         <div className="w-full h-96 flex justify-center mb-10">
-            <div className="w-[400px] h-72 rounded-lg transition-all duration-500 transform hover:scale-105 hover:shadow-3xl">
-                <h1 className="text-2xl text-center mb-4">I'm here</h1>
+            <div className="w-[400px] h-[242px] mt-[32px] rounded-lg transition-all duration-500 transform hover:scale-105 hover:shadow-3xl">
+                <h1 className="text-2xl text-center text-customWhiteblue mb-[18px] font-semibold">I'm here</h1>
                 <MapContainer
                     center={[location.latitude, location.longitude]}
                     zoom={5}
