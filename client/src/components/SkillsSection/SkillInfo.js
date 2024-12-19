@@ -12,6 +12,7 @@ const SkillInfo = ({ onClick, showInfo }) => (
   className="absolute top-[5px] right-10 xxs:right-12 p-1 rounded-full bg-[#8d99ae] text-white flex items-center justify-center"
   onClick={onClick}
   style={{ width: "41px", height: "20px", zIndex: 40 }}
+  aria-label="Toggle information panel for skill syntax"
 >
   <div
     className={`w-5 h-5 bg-[#5a189a] rounded-full transition-transform duration-300 ${
@@ -19,6 +20,7 @@ const SkillInfo = ({ onClick, showInfo }) => (
     }`}
   ></div>
 </button>
+
 
     </div>
   );
