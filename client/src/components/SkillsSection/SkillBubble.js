@@ -2,6 +2,7 @@ import React from "react";
 import { FaReact, FaHtml5, FaCss3Alt, FaJsSquare, FaNodeJs, FaGithub } from "react-icons/fa"; // добавили FaGithub для Git
 import { SiRedux, SiTailwindcss, SiSass, SiMongodb } from "react-icons/si"; // Импорт MongoDB
 import { TbApi } from "react-icons/tb"; // Импорт Rest API
+import SvgForFirefox from './SvgForFirefox';
 
 const SkillBubble = ({ skill, level, size, style, syntaxName, showInfo }) => {
   const renderIcon = () => {
@@ -69,6 +70,7 @@ const SkillBubble = ({ skill, level, size, style, syntaxName, showInfo }) => {
           height: "100",
         }}
       >
+   <SvgForFirefox showInfo={showInfo} size={size} />
         <path
           d={
             size === "small"

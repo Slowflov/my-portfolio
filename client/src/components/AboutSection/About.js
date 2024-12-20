@@ -1,9 +1,9 @@
 // src/components/AboutSection/AboutSection.js
 import React from 'react';
 import { Helmet } from 'react-helmet';
-import Navigation from './Navigation';   // Импортируем навигацию
-import Header from './Header';           // Импортируем хедер
-import Photo from './Photo';             // Импортируем фото
+import Navigation from './Navigation';
+import Header from './Header';
+import Photo from './Photo';
 
 function AboutSection() {
   return (
@@ -19,9 +19,9 @@ function AboutSection() {
         <meta property="og:url" content="https://my-portfolio-gm61.onrender.com/" />
         <link rel="canonical" href="https://my-portfolio-gm61.onrender.com/#about" />
       </Helmet>
-      <Navigation />  {/* Добавляем компонент навигации */}
-      <Header />      {/* Добавляем компонент хедера */}
-      <Photo />       {/* Добавляем компонент фото */}
+      <Navigation />
+      <Header />
+      <Photo />
     </section>
   );
 }
