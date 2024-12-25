@@ -17,6 +17,7 @@ module.exports = {
       animation: {
         'slow-pulse': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
         'scroll-up': 'scrollUp 7s linear infinite',
+        'float': 'float 4s ease-in-out infinite', // Новая анимация движения вверх/вниз
       },
       keyframes: {
         scrollUp: {
@@ -27,6 +28,10 @@ module.exports = {
             backgroundPosition: '0px -860px',
           },
         },
+        float: { // Новые keyframes для плавного движения
+          '0%, 100%': { transform: 'translateY(-10px)' },
+          '50%': { transform: 'translateY(10px)' },
+        },
       },
     },
   },
@@ -34,6 +39,7 @@ module.exports = {
     require('tailwind-clip-path'),
   ],
 };
+
 
 
 

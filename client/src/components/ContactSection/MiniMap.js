@@ -8,7 +8,7 @@ import humanIcon from "../../assets/human-icon.png"; // импортируем �
 function MiniMap() {
     // Установите статичные координаты
     const location = {
-        latitude: 45.7772, // координаты Клермон-Феррана
+        latitude: 45.7772,
         longitude: 3.0870
     };
 

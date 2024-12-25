@@ -28,9 +28,9 @@ const SkillBubble = ({ skill, level, size, style, syntaxName, showInfo }) => {
       case "Rest API":
         return <TbApi className="text-5xl text-gray-500" />;
       case "Git":
-        return <FaGithub className="text-5xl text-black" />;  // Иконка для Git
+        return <FaGithub className="text-5xl text-black" />;
       case "Postman":
-        return <TbApi className="text-5xl text-orange-500" />; // Можно заменить на более подходящую иконку для Postman
+        return <TbApi className="text-5xl text-orange-500" />;
       default:
         return <FaReact className="text-5xl text-white" />;
     }
@@ -47,7 +47,9 @@ const SkillBubble = ({ skill, level, size, style, syntaxName, showInfo }) => {
 
   return (
 <div
-  className={`absolute flex items-center justify-center ${bubbleSize} bg-gradient-to-br from-[#5c9ead]/75 to-[#702963]/75 rounded-full shadow-lg transition-all duration-300 group z-60 hover:scale-125 xxs:hover:scale-110 hover:shadow-[0_0_15px_5px_rgba(255,255,255,0.6)]`}
+className={`absolute flex items-center justify-center ${bubbleSize} bg-gradient-to-br from-[#5c9ead]/75 to-[#702963]/75 rounded-full shadow-lg  transition-shadow duration-300 ease-in-out group hover:scale-125 xxs:hover:scale-110 hover:rotate-[10deg] hover:shadow-[0_0_25px_10px_rgba(255,255,255,0.6)] hover:bg-gradient-to-tl hover:from-[#7bb3c9]/75 hover:to-[#a23b6c]/75 animate-float`}
+
+
   style={{
     top: style?.top || "auto",
     left: style?.left || "auto",
