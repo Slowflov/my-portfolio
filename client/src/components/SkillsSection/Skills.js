@@ -7,7 +7,6 @@ function Skills() {
   const [showInfo, setShowInfo] = useState(false); // Состояние для отображения панели
   const [isAndroid, setIsAndroid] = useState(false);
   const [isIphone, setIsIphone] = useState(false);
-  const [sectionHeight, setSectionHeight] = useState("100vh");
 
   useEffect(() => {
     // Проверяем, если это Android
@@ -18,17 +17,6 @@ function Skills() {
     if (/iPhone|iPod/i.test(navigator.userAgent)) {
       setIsIphone(true);
     }
-
-    // Устанавливаем корректную высоту для секции
-    const updateHeight = () => {
-      setSectionHeight(window.innerHeight + "px");
-    };
-    window.addEventListener("resize", updateHeight);  // Обновляем высоту при изменении размера экрана
-    updateHeight(); // Запускаем сразу при загрузке компонента
-
-    return () => {
-      window.removeEventListener("resize", updateHeight);
-    };
   }, []);
 
   const handleButtonClick = () => {
@@ -38,8 +26,9 @@ function Skills() {
   return (
     <section
       id="skills"
-      className="bg-gradient-to-b from-[#14213d] to-[#264653] relative overflow-hidden flex flex-col items-center justify-start"
-      style={{ minHeight: sectionHeight }} // Используем динамическую высоту
+      className={`min-h-screen bg-gradient-to-b from-[#14213d] to-[#264653] relative overflow-hidden
+        ${isAndroid ? "pt-[calc(50vh)]" : ""}
+        ${isIphone ? "pt-[calc(55vh)]" : ""}`} // Работаем с паддингами для Android и iPhone
     >
       {/* Компонент для отображения информации */}
       <SkillInfo onClick={handleButtonClick} showInfo={showInfo} />
@@ -48,11 +37,10 @@ function Skills() {
       <img
         src={MySkills}
         alt="A developer with an idea"
-        className="absolute left-1/2 transform -translate-x-1/2 object-contain"
+        className="absolute left-1/2 bottom-[200px] transform -translate-x-1/2 object-contain"
         style={{
           width: "950px",
           height: "900px",
-          bottom: isAndroid ? "200px" : isIphone ? "180px" : "200px", // Небольшие различия для Android и iPhone
           pointerEvents: "none",
         }}
       />
@@ -64,6 +52,7 @@ function Skills() {
 }
 
 export default Skills;
+
 
 
 
