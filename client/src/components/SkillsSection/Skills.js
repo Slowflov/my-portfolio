@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState, useEffect } from "react";
 import SkillInfo from "./SkillInfo"; // Компонент с информацией
 import SkillCloud from "./SkillCloud"; // Новый компонент для облака навыков
 import MySkills from "../../assets/skills.png";  // Путь к картинке
@@ -7,10 +7,6 @@ function Skills() {
   const [showInfo, setShowInfo] = useState(false); // Состояние для отображения панели
   const [isAndroid, setIsAndroid] = useState(false);
   const [isIphone, setIsIphone] = useState(false);
-
-  const handleButtonClick = () => {
-    setShowInfo(prev => !prev); // Меняем состояние отображения панели
-  };
 
   useEffect(() => {
     // Проверяем, если это Android
@@ -23,13 +19,15 @@ function Skills() {
     }
   }, []);
 
+  const handleButtonClick = () => {
+    setShowInfo(prev => !prev); // Меняем состояние отображения панели
+  };
+
   return (
     <section
       id="skills"
-      className={`bg-gradient-to-b from-[#14213d] to-[#264653] relative overflow-hidden
-        ${isAndroid ? "min-h-[calc(100vh+50px)]" : ""}
-        ${isIphone ? "min-h-[calc(100vh+60px)]" : "min-h-screen"}
-      `}
+      className={`bg-gradient-to-b from-[#14213d] to-[#264653] relative overflow-hidden 
+      ${isAndroid ? 'min-h-[calc(100vh+50px)]' : ''} ${isIphone ? 'min-h-[calc(100vh+60px)]' : 'h-screen'}`}
     >
       {/* Компонент для отображения информации */}
       <SkillInfo onClick={handleButtonClick} showInfo={showInfo} />
@@ -40,9 +38,9 @@ function Skills() {
         alt="A developer with an idea"
         className="absolute left-1/2 bottom-[200px] transform -translate-x-1/2 object-contain"
         style={{
-          width: "950px", 
-          height: "900px", 
-          pointerEvents: "none",
+          width: "950px",
+          height: "900px",
+          pointerEvents: "none"
         }}
       />
 
