@@ -26,24 +26,28 @@ function Skills() {
   return (
     <section
       id="skills"
-      className={`min-h-screen bg-gradient-to-b from-[#14213d] to-[#264653] relative overflow-hidden
-        ${isAndroid ? "pt-[calc(50vh)]" : ""}
-        ${isIphone ? "pt-[calc(55vh)]" : ""}`} // Работаем с паддингами для Android и iPhone
+      className={`min-h-screen bg-gradient-to-b from-[#14213d] to-[#264653] relative overflow-hidden flex flex-col items-center 
+      ${isAndroid ? "android-class" : ""} ${isIphone ? "iphone-class" : ""}`}
     >
       {/* Компонент для отображения информации */}
       <SkillInfo onClick={handleButtonClick} showInfo={showInfo} />
 
       {/* Картинка с навыками */}
-      <img
-        src={MySkills}
-        alt="A developer with an idea"
-        className="absolute left-1/2 bottom-[200px] transform -translate-x-1/2 object-contain"
-        style={{
-          width: "950px",
-          height: "900px",
-          pointerEvents: "none",
-        }}
-      />
+      <div
+        className="relative flex justify-center items-center mb-12 md:mb-16 lg:mb-32"
+        style={{ maxHeight: "600px", minHeight: "300px", width: "100%" }}
+      >
+        <img
+          src={MySkills}
+          alt="A developer with an idea"
+          className="object-contain max-w-full h-auto"
+          style={{
+            maxWidth: "90%", // максимальная ширина картинки
+            maxHeight: "500px", // максимальная высота для ограничения размера
+            pointerEvents: "none",
+          }}
+        />
+      </div>
 
       {/* Облако навыков с пузырями */}
       <SkillCloud showInfo={showInfo} />
@@ -52,7 +56,6 @@ function Skills() {
 }
 
 export default Skills;
-
 
 
 
