@@ -7,6 +7,7 @@ function Skills() {
   const [showInfo, setShowInfo] = useState(false); // Состояние для отображения панели
   const [isAndroid, setIsAndroid] = useState(false);
   const [isIphone, setIsIphone] = useState(false);
+  const [sectionHeight, setSectionHeight] = useState("100vh");
 
   useEffect(() => {
     // Проверяем, если это Android
@@ -17,6 +18,17 @@ function Skills() {
     if (/iPhone|iPod/i.test(navigator.userAgent)) {
       setIsIphone(true);
     }
+
+    // Устанавливаем корректную высоту для секции
+    const updateHeight = () => {
+      setSectionHeight(window.innerHeight + "px");
+    };
+    window.addEventListener("resize", updateHeight);  // Обновляем высоту при изменении размера экрана
+    updateHeight(); // Запускаем сразу при загрузке компонента
+
+    return () => {
+      window.removeEventListener("resize", updateHeight);
+    };
   }, []);
 
   const handleButtonClick = () => {
@@ -26,7 +38,8 @@ function Skills() {
   return (
     <section
       id="skills"
-      className={`bg-gradient-to-b from-[#14213d] to-[#264653] relative overflow-hidden min-h-screen flex flex-col items-center justify-start`}
+      className="bg-gradient-to-b from-[#14213d] to-[#264653] relative overflow-hidden flex flex-col items-center justify-start"
+      style={{ minHeight: sectionHeight }} // Используем динамическую высоту
     >
       {/* Компонент для отображения информации */}
       <SkillInfo onClick={handleButtonClick} showInfo={showInfo} />
@@ -51,7 +64,6 @@ function Skills() {
 }
 
 export default Skills;
-
 
 
 
