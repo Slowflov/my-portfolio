@@ -33,21 +33,13 @@ function Skills() {
       <SkillInfo onClick={handleButtonClick} showInfo={showInfo} />
 
       {/* Картинка с навыками */}
-      <div
-        className="relative flex justify-center items-center mb-12 md:mb-16 lg:mb-32"
-        style={{ maxHeight: "600px", minHeight: "300px", width: "100%" }}
-      >
-        <img
-          src={MySkills}
-          alt="A developer with an idea"
-          className="object-contain max-w-full h-auto"
-          style={{
-            maxWidth: "90%", // максимальная ширина картинки
-            maxHeight: "500px", // максимальная высота для ограничения размера
-            pointerEvents: "none",
-          }}
-        />
-      </div>
+      <div className="flex justify-center items-center min-h-screen pointer-events-none object-contain max-w-[110%] sm:max-w-[90%]">
+  <img
+    src={MySkills}
+    alt="A developer with an idea"
+  />
+</div>
+
 
       {/* Облако навыков с пузырями */}
       <SkillCloud showInfo={showInfo} />
