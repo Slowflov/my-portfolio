@@ -17,7 +17,6 @@ function Photo() {
       transformOrigin: "center",
       pointerEvents: "none"
     }}
-    loading="lazy"
   />
 </div>
 
@@ -32,7 +31,6 @@ function Photo() {
           style={{
             clipPath: "polygon(0% 0%, 95% 0%, 100% 100%, 9% 89%)"
           }}
-          loading="lazy"
         />
       </div>
     </>
