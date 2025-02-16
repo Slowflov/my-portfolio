@@ -1,7 +1,7 @@
 import React from "react";
-import { FaReact, FaHtml5, FaCss3Alt, FaJsSquare, FaNodeJs, FaGithub } from "react-icons/fa"; // добавили FaGithub для Git
-import { SiRedux, SiTailwindcss, SiSass, SiMongodb } from "react-icons/si"; // Импорт MongoDB
-import { TbApi } from "react-icons/tb"; // Импорт Rest API
+import { FaReact, FaHtml5, FaCss3Alt, FaJsSquare, FaNodeJs, FaGithub } from "react-icons/fa";
+import { SiRedux, SiTailwindcss, SiSass, SiMongodb, SiTypescript, SiNextdotjs } from "react-icons/si";
+import { TbApi } from "react-icons/tb";
 import SvgForFirefox from './SvgForFirefox';
 
 const SkillBubble = ({ skill, level, size, style, syntaxName, showInfo }) => {
@@ -31,10 +31,15 @@ const SkillBubble = ({ skill, level, size, style, syntaxName, showInfo }) => {
         return <FaGithub className="text-5xl text-black" />;
       case "Postman":
         return <TbApi className="text-5xl text-orange-500" />;
+      case "Typescript":
+        return <SiTypescript className="text-5xl text-[#3178C6]" />;
+      case "Nextjs":
+        return <SiNextdotjs className="text-5xl text-gray-800" />;
       default:
-        return <FaReact className="text-5xl text-white" />;
+        return <FaReact className="text-5xl text-gray-300" />;
     }
   };
+  
 
   const bubbleSize =
   size === "large"
