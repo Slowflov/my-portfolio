@@ -4,7 +4,7 @@ import SkillCloud from "./SkillCloud";
 import MySkills from "../../assets/skills.png";
 
 function Skills() {
-  const [showInfo, setShowInfo] = useState(false); // Состояние для отображения панели
+  const [showInfo, setShowInfo] = useState(false);
   const [isAndroid, setIsAndroid] = useState(false);
   const [isIphone, setIsIphone] = useState(false);
 
@@ -18,7 +18,7 @@ function Skills() {
   }, []);
 
   const handleButtonClick = () => {
-    setShowInfo((prev) => !prev); // Меняем состояние отображения панели
+    setShowInfo((prev) => !prev);
   };
 
   return (

@@ -9,17 +9,22 @@ const SkillInfo = ({ onClick, showInfo }) => (
   
       {/* Кнопка для отображения дополнительной информации */}
       <button
-  className="absolute top-[5px] right-10 xxs:right-12 p-1 rounded-full bg-[#8d99ae] text-white flex items-center justify-center"
+  className={`absolute top-[5px] right-10 xxs:right-12 p-1 rounded-full flex items-center justify-center transition-colors duration-300 ${
+    showInfo ? "bg-[#5a189a]" : "bg-[#8d99ae]"
+  }`}
   onClick={onClick}
   style={{ width: "41px", height: "20px", zIndex: 40 }}
   aria-label="Toggle information panel for skill syntax"
 >
   <div
-    className={`w-5 h-5 bg-[#5a189a] rounded-full transition-transform duration-300 ${
-      showInfo ? "transform translate-x-[12px]" : "transform translate-x-[-10.8px]"
+    className={`w-5 h-5 rounded-full transition-transform duration-300 ${
+      showInfo
+        ? "bg-[#8d99ae] transform translate-x-[12px]"
+        : "bg-[#5a189a] transform translate-x-[-10.8px]"
     }`}
   ></div>
 </button>
+
 
 
     </div>
