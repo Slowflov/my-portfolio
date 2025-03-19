@@ -5,6 +5,7 @@ import Photobank from "../../assets/Bank.png";
 import PhotoSophie from "../../assets/Sophie.png";
 import Agence from "../../assets/agence.png";
 import ProjectCard from './ProjectCard';
+import ConstStore from '../../assets/Hardware_store.png'
 
 function Projects() {
   return (
@@ -87,36 +88,16 @@ function Projects() {
       />
 
       {/* шестой блок */}
-      <a
-        href="https://slowflov.github.io/project4/index.html#"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="block w-7/12 max-w-4xl bg-black overflow-hidden cursor-pointer relative hover:scale-105 hover:z-10 transition-all duration-300 mr-[170px] md:mr-[320px] xsm:mr-[110px] mt-[-125px]"
-        style={{
-          boxShadow: '12px -11px 15px 2px rgba(0, 0, 0, 0.7)',
-        }}
-      >
-        <div className="w-full bg-[#04192e] h-8 flex items-center justify-between px-4 relative">
-          <h2 className="text-white text-xs sm:text-lg font-semibold">Manicure master's</h2>
-          <div className="absolute right-2 sm:right-4 flex justify-center items-center w-6 h-6 border-2 border-white rounded-full">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="w-4 h-4 text-white"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth={2}
-            >
-              <line x1="17" y1="7" x2="7" y2="17" stroke="currentColor" strokeWidth="2" />
-              <line x1="7" y1="17" x2="15" y2="17" stroke="currentColor" strokeWidth="2" />
-              <line x1="7" y1="17" x2="7" y2="9" stroke="currentColor" strokeWidth="2" />
-            </svg>
-          </div>
-        </div>
-        <div className="w-full h-60 bg-black flex items-center justify-center">
-          <span className="text-white text-2xl xsm:text-lg font-bold">in development</span>
-        </div>
-      </a>
+      <ProjectCard
+  title="Construction store"
+  image={ConstStore}
+  link="#"
+  description="construction store, online store for sales in Ukraine"
+  className="mr-[170px] md:mr-[320px] xsm:mr-[110px] mt-[-125px]"
+  style={{
+    boxShadow: '12px -11px 15px 2px rgba(0, 0, 0, 0.7)',
+  }}
+/>
     </section>
   );
 }
