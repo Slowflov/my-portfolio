@@ -8,7 +8,7 @@ function Navigation() {
   return (
     <nav className="w-full flex justify-between items-center border-b border-white/50 pb-4 bg-gradient-to-b from-[#264653] to-[#04192e] z-10">
       <div className="flex items-center space-x-2 sm:space-x-3">
-        <img src={logo} alt="Logo" className="w-8 h-8 sm:w-10 sm:h-10 pl-[2px]" />
+        <img src={logo} alt="Logo" className="w-6 h-6 sm:w-10 sm:h-10 pl-[2px]" />
         <div className="text-xs sm:text-sm md:text-base font-bold text-white">
           Rouslan Ouvarov
         </div>

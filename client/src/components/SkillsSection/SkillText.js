@@ -73,6 +73,7 @@ const SkillText = () => {
           <Skill name="LINUX" />
           <Skill name="FIGMA" />
           <Skill name="CANVA" />
+          <Skill name="WINDOWS" />
         </div>
       </div>
     </div>

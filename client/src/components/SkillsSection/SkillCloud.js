@@ -23,7 +23,7 @@ const SkillCloud = ({ showInfo }) => {
     { name: "Sass", level: 13, size: "small", position: { lg: { bottom: "13%", left: "40%" }, md: { bottom: "12%", left: "37%" }, sm: { bottom: "9%", left: "64%" }, xs: { bottom: "15%", left: "47%" } }},
     { name: "MongoDB", level: 12, size: "small", position: { lg: { top: "82%", right: "74%" }, md: { top: "82%", right: "74%" }, sm: { top: "52%", right: "12%" }, xs: { top: "89%", right: "12%" } }},
     { name: "Rest API", level: 11, size: "medium", position: { lg: { bottom: "75%", right: "40%" }, md: {bottom: "75%", right: "42%" }, sm: { bottom: "24%", right: "9%" }, xs: { bottom: "42%", right: "23%" } }},
-    { name: "Git", level: 12, size: "medium", position: { lg: { top: "9%", left: "21%" }, md: { top: "9%", left: "21%" }, sm: { top: "8%", left: "21%" }, xs: { top: "31%", left: "65%" } }},
+    { name: "Git", level: 12, size: "medium", position: { lg: { top: "9%", left: "27%" }, md: { top: "9%", left: "27%" }, sm: { top: "8%", left: "31%" }, xs: { top: "31%", left: "65%" } }},
     { name: "Postman", level: 9, size: "small", position: { lg: { bottom: "30%", left: "26%" }, md: { bottom: "30%", left: "22%" }, sm: { bottom: "20%", left: "15%" }, xs: { bottom: "49%", left: "76%" } }},
     { name: "Typescript", level: 0, size: "medium", position: { lg: { bottom: "56%", left: "26%" }, md: { bottom: "60%", left: "25%" }, sm: { bottom: "10%", left: "25%" }, xs: { bottom: "49%", left: "76%" } }},
     { name: "Nextjs", level: 0, size: "medium", position: { lg: { top: "72%", right: "83%" }, md: { top: "84%", right: "4%" }, sm: { top: "56%", right: "27%" }, xs: { top: "87%", right: "16%" } }}
