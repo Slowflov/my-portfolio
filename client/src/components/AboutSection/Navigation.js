@@ -17,16 +17,34 @@ function Navigation() {
       <div className="relative flex text-xs sm:text-lg md:text-xl space-x-3 md:space-x-8 lg:space-x-16 xsm:space-x-1 pr-1">
   <a
     href="#about"
-    className="hover:text-blue-100 xxs:flex xxs:flex-col xxs:items-center"
+    className="group relative xxs:flex xxs:flex-col xxs:items-center"
   >
     <span className="hidden xxs:inline">About</span>
     <span className="hidden xxs:inline">Me</span>
     <span className="inline xxs:hidden">About Me</span>
+    <span className="pointer-events-none absolute top-0 left-0 w-0 h-[2px] bg-blue-300 transition-all duration-300 group-hover:w-full" />
+    <span className="pointer-events-none absolute bottom-0 right-0 w-0 h-[2px] bg-blue-300 transition-all duration-300 group-hover:w-full" />
   </a>
-  <a href="#skills" className="hover:text-blue-100">Skills</a>
-  <a href="#projects" className="hover:text-blue-100">Projects</a>
-  <a href="#contact" className="hover:text-blue-100">Contact</a>
+
+  <a href="#skills" className="relative group">
+    Skills
+    <span className="pointer-events-none absolute top-0 left-0 w-0 h-[2px] bg-blue-300 transition-all duration-300 group-hover:w-full" />
+    <span className="pointer-events-none absolute bottom-0 right-0 w-0 h-[2px] bg-blue-300 transition-all duration-300 group-hover:w-full" />
+  </a>
+
+  <a href="#projects" className="relative group">
+    Projects
+    <span className="pointer-events-none absolute top-0 left-0 w-0 h-[2px] bg-blue-300 transition-all duration-300 group-hover:w-full" />
+    <span className="pointer-events-none absolute bottom-0 right-0 w-0 h-[2px] bg-blue-300 transition-all duration-300 group-hover:w-full" />
+  </a>
+
+  <a href="#contact" className="relative group">
+    Contact
+    <span className="pointer-events-none absolute top-0 left-0 w-0 h-[2px] bg-blue-300 transition-all duration-300 group-hover:w-full" />
+    <span className="pointer-events-none absolute bottom-0 right-0 w-0 h-[2px] bg-blue-300 transition-all duration-300 group-hover:w-full" />
+  </a>
 </div>
+
 
       <div className="flex space-x-2 pr-[3px] md:space-x-4 xsm:space-x-2">
         <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">

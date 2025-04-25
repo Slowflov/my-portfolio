@@ -9,10 +9,15 @@ module.exports = {
         customWhiteblue: '#264653',
         customDarkblue: '#04192e',
       },
+      spacing: { 
+        22: '5.5rem', // 88px
+        26: '6.5rem', // 104px
+      },
       screens: {
         'xxl': {'max': '900px'},
         'xsm': {'max': '400px'},
         'xxs': {'max': '640px'},
+        'lg-min': '1340px',
       },
       animation: {
         'slow-pulse': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',

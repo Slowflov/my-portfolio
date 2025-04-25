@@ -21,7 +21,7 @@ function AboutSection() {
 
   return (
     <section
-      className={`bg-gradient-to-b from-[#264653] to-[#04192e] flex flex-col items-center justify-start text-white px-3 py-2 relative overflow-hidden
+      className={`bg-[#264653] bg-[radial-gradient(ellipse_at_bottom_left,_#04192e_71%,_transparent_71%),radial-gradient(ellipse_at_bottom,_#04192e_40%,_transparent_41%),linear-gradient(to_right,_transparent_70%,_#264653_71%)] flex flex-col items-center justify-start text-white px-3 py-2 relative overflow-hidden
       ${isAndroid ? 'min-h-[calc(100vh+50px)]' : ''} ${isIphone ? 'min-h-[calc(100vh+60px)]' : ''}`}
     >
       <Helmet>

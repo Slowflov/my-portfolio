@@ -1,12 +1,20 @@
+// src/components/Skills.js
 import React, { useState, useEffect } from "react";
 import SkillInfo from "./SkillInfo";
 import SkillCloud from "./SkillCloud";
 import MySkills from "../../assets/skills.png";
+import ButtonText from './ButtonText';
+import SkillText from './SkillText';
+import ButtonBubble from './ButtonBubble'; 
+import ImageBubble from './ImageBubble';
 
 function Skills() {
   const [showInfo, setShowInfo] = useState(false);
   const [isAndroid, setIsAndroid] = useState(false);
   const [isIphone, setIsIphone] = useState(false);
+  const [isSkillTextVisible, setIsSkillTextVisible] = useState(false);
+  const [isSkillCloudVisible, setIsSkillCloudVisible] = useState(true);
+  const [isAlternateBackground, setIsAlternateBackground] = useState(false);
 
   useEffect(() => {
     if (/Android/i.test(navigator.userAgent)) {
@@ -21,27 +29,49 @@ function Skills() {
     setShowInfo((prev) => !prev);
   };
 
+  const handleButtonTextClick = () => {
+    setIsSkillCloudVisible((prev) => !prev);
+    setIsSkillTextVisible((prev) => !prev);
+    setIsAlternateBackground((prev) => !prev); // Переключаем фон
+  };
+
   return (
     <section
       id="skills"
-      className={`min-h-screen bg-gradient-to-b from-[#14213d] to-[#264653] relative overflow-hidden flex flex-col items-center 
+      className={`min-h-screen relative overflow-hidden flex flex-col items-center 
+      ${isAlternateBackground ? "min-h-screen relative overflow-hidden flex flex-col items-center bg-[radial-gradient(circle_at_top_center,_#264653_0%,_#14213d_40%)]" : "min-h-screen relative overflow-hidden flex flex-col items-center bg-[radial-gradient(ellipse_at_top,_#14213d_50%,_#264653_100%)]"} 
       ${isAndroid ? "android-class" : ""} ${isIphone ? "iphone-class" : ""}`}
     >
       <SkillInfo onClick={handleButtonClick} showInfo={showInfo} />
 
-      <div className="flex justify-center items-center min-h-screen pointer-events-none object-contain max-w-[110%] sm:max-w-[90%]">
-  <img
-    src={MySkills}
-    alt="A developer with an idea"
-  />
-</div>
+      <div className="absolute left-8 sm:left-12 top-[150px] sm:top-[160px] transform -translate-y-1/2 z-50">
+        <ButtonText onClick={handleButtonTextClick} />
+      </div>
 
-      <SkillCloud showInfo={showInfo} />
+      {isSkillCloudVisible && (
+        <>
+          <ButtonBubble onClick={handleButtonClick} showInfo={showInfo} />
+          <SkillCloud showInfo={showInfo} />
+          <ImageBubble src={MySkills} alt="A developer with an idea" />
+        </>
+      )}
+
+      {isSkillTextVisible && (
+        <div className="absolute inset-0 flex justify-center items-center">
+          <SkillText />
+        </div>
+      )}
     </section>
   );
 }
 
 export default Skills;
+
+
+
+
+
+
 
 
 

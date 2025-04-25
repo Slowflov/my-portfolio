@@ -33,7 +33,7 @@ const SkillCloud = ({ showInfo }) => {
   return (
     <>
 {skills.map((skill, index) => {
-        if (screenWidth < 740 && ["Postman", "Sass", "Rest API", "MongoDB", "Tailwind", "Git"].includes(skill.name)) {
+        if (screenWidth < 740 && ["Postman", "Sass", "Rest API", "MongoDB", "Tailwind", "Git" , "Redux"].includes(skill.name)) {
           return null;
         }
         const position = getPosition(skill.position);

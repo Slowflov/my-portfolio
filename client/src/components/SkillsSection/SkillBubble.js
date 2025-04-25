@@ -43,12 +43,10 @@ const SkillBubble = ({ skill, level, size, style, syntaxName, showInfo }) => {
 
   const bubbleSize =
   size === "large"
-    ? "w-32 h-32 xxs:w-28 xxs:h-28"  // Для экранов до 640px будет уменьшено
-    : size === "medium"
-    ? "w-28 h-28 xxs:w-24 xxs:h-24"  // Для экранов до 640px будет уменьшено
-    : size === "small"
-    ? "w-24 h-24 xxs:w-20 xxs:h-20"  // Для экранов до 640px будет уменьшено
-    : "w-28 h-28 xxs:w-24 xxs:h-24";  // Для экранов до 640px будет уменьшено
+  ? "w-26 h-26 sm:w-28 sm:h-28 md:w-32 md:h-32"
+  : size === "medium"
+  ? "w-22 h-22 sm:w-24 sm:h-24 md:w-28 md:h-28"
+  : "w-20 h-20 sm:w-20 sm:h-20 md:w-26 md:h-26"; // по умолчанию — small
 
   return (
 <div
