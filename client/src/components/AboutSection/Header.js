@@ -4,8 +4,8 @@ import React from 'react';
 function Header() {
   return (
 <header className="flex flex-col items-start justify-start xxl:items-center xxl:justify-center w-full px-6 sm:px-12 mt-48 xxl:mt-20 relative z-50">
-  <div className="bg-white/80 px-5 py-3 rounded-lg text-left mb-6 max-w-full sm:max-w-screen-sm md:max-w-screen-md">
-    <h1 className="text-xl sm:text-3xl md:text-3xl font-bold text-gray-800 overflow-hidden">
+  <div className="bg-[#264653] px-5 py-3 rounded-lg text-left mb-6 max-w-full sm:max-w-screen-sm md:max-w-screen-md">
+    <h1 className="text-xl sm:text-3xl md:text-3xl font-bold text-white overflow-hidden">
       Welcome To My Portfolio
     </h1>
   </div>

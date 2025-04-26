@@ -59,6 +59,7 @@ const SkillText = () => {
           <Skill name="MONGODB" />
           <Skill name="MONGOOSE" />
           <Skill name="TS-NODE" />
+          <Skill name="SWAGGER" />
         </div>
 
         {/* Нижняя строка */}
