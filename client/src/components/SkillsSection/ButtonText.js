@@ -5,7 +5,7 @@ const ButtonText = ({ onClick }) => {
 
   const handleClick = () => {
     setIsSwapped(!isSwapped);
-    onClick(); // вызываем переданный обработчик
+    onClick();
   };
 
   return (
@@ -25,7 +25,9 @@ const ButtonText = ({ onClick }) => {
         onClick={handleClick} 
       >
         {/* Текст для больших экранов */}
-        <span className="text-[#caf0f8] text-lg hidden sm:inline">Show the text</span>
+        <span className="text-[#caf0f8] text-lg hidden sm:inline">
+          {isSwapped ? 'Show the bubble' : 'Show the text'}
+        </span>
 
         {/* Полоски для sm и меньших экранов */}
         <div className="flex flex-col space-y-1 sm:hidden">
@@ -42,6 +44,7 @@ const ButtonText = ({ onClick }) => {
 };
 
 export default ButtonText;
+
 
 
 
