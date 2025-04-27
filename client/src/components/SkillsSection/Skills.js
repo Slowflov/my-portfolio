@@ -42,7 +42,7 @@ function Skills() {
       ${isAlternateBackground ? "min-h-screen relative overflow-hidden flex flex-col items-center bg-[radial-gradient(circle_at_top_center,_#264653_0%,_#14213d_40%)]" : "min-h-screen relative overflow-hidden flex flex-col items-center bg-[radial-gradient(ellipse_at_top,_#14213d_50%,_#264653_100%)]"} 
       ${isAndroid ? "android-class" : ""} ${isIphone ? "iphone-class" : ""}`}
     >
-      <SkillInfo onClick={handleButtonClick} showInfo={showInfo} />
+
 
       <div className="absolute left-8 sm:left-12 top-[150px] sm:top-[160px] transform -translate-y-1/2 z-50">
         <ButtonText onClick={handleButtonTextClick} />
@@ -53,6 +53,7 @@ function Skills() {
           <ButtonBubble onClick={handleButtonClick} showInfo={showInfo} />
           <SkillCloud showInfo={showInfo} />
           <ImageBubble src={MySkills} alt="A developer with an idea" />
+          <SkillInfo onClick={handleButtonClick} showInfo={showInfo} />
         </>
       )}
 

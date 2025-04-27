@@ -20,7 +20,7 @@ function Photo() {
   />
 </div>
 
-      <div className="relative mb-14 ml-6 w-[350px] h-[350px] mt-10 z-0 justify-center items-end hidden xxl:block">
+      <div className="relative mb-14 ml-1 md:ml-6 w-[350px] h-[350px] mt-10 z-0 justify-center items-end hidden xxl:block">
         <img
           srcSet={`${Myphoto}?w=300 300w, ${Myphoto}?w=600 600w, ${Myphoto}?w=900 900w`} 
           sizes="(max-width: 600px) 300px, (max-width: 1200px) 600px, 900px"
