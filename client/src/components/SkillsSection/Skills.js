@@ -44,9 +44,9 @@ function Skills() {
     >
 
 
-      <div className="absolute left-8 sm:left-12 top-[150px] sm:top-[160px] transform -translate-y-1/2 z-50">
-        <ButtonText onClick={handleButtonTextClick} />
-      </div>
+<div className=" z-50">
+  <ButtonText onClick={handleButtonTextClick} />
+</div>
 
       {isSkillCloudVisible && (
         <>
@@ -58,7 +58,7 @@ function Skills() {
       )}
 
       {isSkillTextVisible && (
-        <div className="absolute inset-0 flex justify-center items-center">
+        <div >
           <SkillText />
         </div>
       )}

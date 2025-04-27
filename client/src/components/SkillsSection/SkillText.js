@@ -2,7 +2,7 @@ import React from 'react';
 
 const SkillText = () => {
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen text-white px-4">
+    <div className="flex flex-col items-center justify-center text-white pt-2 sm:pt-40 pb-12 md:pb-0 px-4">
       {/* Заголовок */}
       <div className="relative mb-14 md:mb-44 sm:mb-32 inline-block">
   <h2 className="text-base md:text-xl sm:text-lg font-bold px-8 md:px-10 sm:px-8 py-3 md:py-5 sm:py-4 border-[3px] border-[#3c3c69] rounded-md bg-gradient-to-r from-[#1A1A40] to-[#0F0F25]">
