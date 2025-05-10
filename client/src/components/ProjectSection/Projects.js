@@ -91,7 +91,7 @@ function Projects() {
       <ProjectCard
   title="Construction store"
   image={ConstStore}
-  link="#"
+  link="https://np-store.netlify.app/"
   description="construction store, online store for sales in Ukraine"
   className="mr-[170px] md:mr-[320px] xsm:mr-[110px] mt-[-125px]"
   style={{
