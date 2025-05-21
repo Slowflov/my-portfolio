@@ -32,7 +32,7 @@ function Skills() {
   const handleButtonTextClick = () => {
     setIsSkillCloudVisible((prev) => !prev);
     setIsSkillTextVisible((prev) => !prev);
-    setIsAlternateBackground((prev) => !prev); // Переключаем фон
+    setIsAlternateBackground((prev) => !prev);
   };
 
   return (

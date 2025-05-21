@@ -8,7 +8,7 @@ const ButtonBubble = ({ onClick, showInfo }) => {
         showInfo ? 'bg-[#5a189a]' : 'bg-[#8d99ae]'
       }`}
       onClick={onClick}
-      style={{ width: '41px', height: '20px', zIndex: 100 }} // Временно увеличьте z-index
+      style={{ width: '41px', height: '20px', zIndex: 100 }}
       aria-label="Toggle information panel for skill syntax"
     >
       <div

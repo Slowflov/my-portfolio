@@ -1,11 +1,13 @@
 // Contact.js
 import React from 'react';
 import { FaLinkedin, FaGithub, FaInfoCircle } from 'react-icons/fa';
-import { SiMonster } from 'react-icons/si';  // Иконка Monster
-import ContactForm from './ContactForm'; // Импортируем компонент формы
-import MiniMap from '../ContactSection/MiniMap';  // Импорт компонента карты
+import { SiMonster } from 'react-icons/si';
+import ContactForm from './ContactForm';
+import MiniMap from '../ContactSection/MiniMap';
+import { useTranslation } from 'react-i18next';
 
 const Contact = () => {
+  const { t } = useTranslation();
   return (
 <section id="contact" className="p-10 bg-gray-400 flex flex-col md:flex-row relative pt-[190px]">
   {/* Левый блок с текстом и иконками */}
@@ -13,10 +15,10 @@ const Contact = () => {
  flex-1 flex flex-col items-start space-y-4 p-6">
   {/* Заголовок с бордером снизу */}
   <div className="flex flex-col items-start">
-  <h2 className="text-5xl font-semibold">
-    <span className="text-customWhiteblue">Contact</span> 
-    <span className="text-[#04192e] ml-2">Me!</span> {/* Добавлен отступ между словами */}
-  </h2>
+    <h2 className="text-5xl font-semibold">
+      <span className="text-customWhiteblue">{t('contact.titlePart1')}</span>
+      <span className="text-[#04192e] ml-2">{t('contact.titlePart2')}</span>
+    </h2>
   <div className="w-40 border-t-2 border-white mt-2 mx-auto"></div> {/* Бордер снизу */}
 </div>
 
@@ -42,13 +44,12 @@ const Contact = () => {
 
   {/* Контент с формой */}
   <div className="flex-1 flex flex-col justify-center items-start space-y-4 p-6">
-    <h2 className="text-2xl text-customWhiteblue font-semibold">Leave A Message</h2>
-
-    {/* Форма */}
+        <h2 className="text-2xl text-customWhiteblue font-semibold">
+      {t("contactbtn.leave")}
+    </h2>
     <ContactForm />  {/* Вставляем компонент формы */}
   </div>
 
-  {/* Карта с правой стороны */}
   <div className="w-full md:w-1/3 flex justify-end p-4">
     <MiniMap />  {/* Компонент карты */}
   </div>

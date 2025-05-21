@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 import emailjs from 'emailjs-com'; // Импортируем библиотеку EmailJS
+import { useTranslation } from 'react-i18next';
 
 const ContactForm = () => {
+    const { t } = useTranslation();
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -69,7 +71,7 @@ const ContactForm = () => {
           name="name"  // Используем соответствующее имя из useState
           value={formData.name}
           onChange={handleChange}
-          placeholder="Name"
+          placeholder={t('placeholder.Name')}
           className="w-1/2 p-2 border border-customWhiteblue rounded"
         />
         {/* Поле Email */}
@@ -78,7 +80,7 @@ const ContactForm = () => {
           name="email"  // Используем соответствующее имя из useState
           value={formData.email}
           onChange={handleChange}
-          placeholder="Email"
+          placeholder={t('placeholder.Email')}
           className="w-1/2 p-2 border border-customWhiteblue rounded"
         />
       </div>
@@ -89,7 +91,7 @@ const ContactForm = () => {
         name="subject"  // Используем соответствующее имя из useState
         value={formData.subject}
         onChange={handleChange}
-        placeholder="Subject"
+        placeholder={t('placeholder.Subject')}
         className="w-full p-2 border border-customWhiteblue rounded"
       />
 
@@ -98,16 +100,15 @@ const ContactForm = () => {
         name="message"  // Используем соответствующее имя из useState
         value={formData.message}
         onChange={handleChange}
-        placeholder="Message"
+        placeholder={t('placeholder.Message')}
         className="w-full p-2 border border-customWhiteblue rounded h-32"
       />
 
       {/* Кнопка отправки */}
       <button
   type="submit"
-  className="self-start bg-customWhiteblue text-gray-300 px-2 py-2 rounded hover:bg-customDarkblue flex items-center"
->
-  SEND A MESSAGE
+  className="self-start bg-customWhiteblue text-gray-300 px-2 py-2 rounded hover:bg-customDarkblue flex items-center">
+  {t('Message.send')}
   <div className="ml-3 w-6 h-6 border-2 border-white rounded-full flex justify-center items-center">
     <svg
       xmlns="http://www.w3.org/2000/svg"

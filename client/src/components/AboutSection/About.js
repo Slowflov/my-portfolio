@@ -3,6 +3,7 @@ import { Helmet } from "react-helmet-async";
 import Navigation from './Navigation';
 import Header from './Header';
 import Photo from './Photo';
+import Lang from './LangSwitcher';
 
 function AboutSection() {
   return (
@@ -22,6 +23,7 @@ function AboutSection() {
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </Helmet>
       <Navigation />
+      <Lang />
       <Header />
       <Photo />
     </section>

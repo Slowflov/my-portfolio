@@ -10,12 +10,13 @@ module.exports = {
         customDarkblue: '#04192e',
       },
       spacing: { 
-        22: '5.5rem', // 88px
-        26: '6.5rem', // 104px
+        22: '5.5rem',
+        26: '6.5rem',
       },
       screens: {
         'xxl': {'max': '900px'},
         'xsm': {'max': '400px'},
+        'xss': {'max': '500px'},
         'xxs': {'max': '640px'},
         'lg-min': '1340px',
       },

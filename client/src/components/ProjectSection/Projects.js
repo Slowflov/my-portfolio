@@ -5,33 +5,21 @@ import Photobank from "../../assets/Bank.png";
 import PhotoSophie from "../../assets/Sophie.png";
 import Agence from "../../assets/agence.png";
 import ProjectCard from './ProjectCard';
-import ConstStore from '../../assets/Hardware_store.png'
+import ConstStore from '../../assets/Hardware_store.png';
+import Projectsinfo from './Projectsinfo';
+import { useTranslation } from 'react-i18next';
 
 function Projects() {
+  const { t } = useTranslation();
   return (
     <section id="projects" className="p-10 bg-gradient-to-r from-[#264653] to-[#14213d] flex flex-col items-end min-h-screen relative">
-      
-      {/* Текст с бордером */}
-      <div className="absolute top-[200px] left-5 sm:left-10 text-white font-semibold text-xs sm:text-base md:text-xl lg:text-2xl xl:text-xl xsm:top-[80px]">
-        <div>
-          <span className="text-[#04192e]">Projects </span>
-          <span className="text-[#04192e]">&gt; </span>
-        </div>
-        <div>
-          <span className="text-gray-400">Web Development / </span>
-        </div>
-        <div>
-          <span className="text-gray-400">Mobile Apps | </span>
-        </div>
-        <div className="inline-block border-b border-white mt-1 pb-[7px]">
-          <span className="text-gray-400">Open Source Contributions </span>
-          <span className="text-gray-400 inline">#</span>
-        </div>
-      </div>
+
+      {/* Вызов второго компонента */}
+      <Projectsinfo />
 
       {/* Первый блок */}
       <ProjectCard
-        title="Restaurant 'ohmyfood'"
+        title={t("Card.title1")}
         image={Photorest}
         link="https://slowflov.github.io/project4/index.html#"
         description="Restaurant menu selection and order process"
@@ -43,7 +31,7 @@ function Projects() {
 
       {/* Второй блок */}
       <ProjectCard
-        title="Real estate rental"
+        title={t("Card.title2")}
         image={Photoroom}
         link="https://slowflov.github.io/project7/#/"
         description="Real estate and hotel properties showcase"
@@ -55,7 +43,7 @@ function Projects() {
 
       {/* Третий блок */}
       <ProjectCard
-        title="Banking application"
+        title={t("Card.title3")}
         image={Photobank}
         link="https://bankking.netlify.app/"
         description="Screenshot of a banking application interface"
@@ -64,9 +52,10 @@ function Projects() {
           boxShadow: '12px -11px 15px 2px rgba(0, 0, 0, 0.7)',
         }}
       />
-       {/* Четвертый блок */}
-       <ProjectCard
-        title="Architecxte d’intérieur"
+
+      {/* Четвертый блок */}
+      <ProjectCard
+        title={t("Card.title4")}
         image={PhotoSophie}
         link="https://slowflov.github.io/Portfolio-architecte-sophie-bluel/index.html"
         description="Screenshot of a banking application interface"
@@ -75,9 +64,10 @@ function Projects() {
           boxShadow: '12px -11px 15px 2px rgba(0, 0, 0, 0.7)',
         }}
       />
-             {/* пятый блок */}
-             <ProjectCard
-        title="Agence d'événementiel"
+
+      {/* Пятый блок */}
+      <ProjectCard
+        title={t("Card.title5")}
         image={Agence}
         link="https://events72.netlify.app/"
         description="Screenshot of a banking application interface"
@@ -87,45 +77,19 @@ function Projects() {
         }}
       />
 
-      {/* шестой блок */}
+      {/* Шестой блок */}
       <ProjectCard
-  title="Construction store"
-  image={ConstStore}
-  link="https://np-store.netlify.app/"
-  description="construction store, online store for sales in Ukraine"
-  className="mr-[170px] md:mr-[320px] xsm:mr-[110px] mt-[-125px]"
-  style={{
-    boxShadow: '12px -11px 15px 2px rgba(0, 0, 0, 0.7)',
-  }}
-/>
+        title={t("Card.title6")}
+        image={ConstStore}
+        link="https://np-store.netlify.app/"
+        description="construction store, online store for sales in Ukraine"
+        className="mr-[170px] md:mr-[320px] xsm:mr-[110px] mt-[-125px]"
+        style={{
+          boxShadow: '12px -11px 15px 2px rgba(0, 0, 0, 0.7)',
+        }}
+      />
     </section>
   );
 }
 
 export default Projects;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

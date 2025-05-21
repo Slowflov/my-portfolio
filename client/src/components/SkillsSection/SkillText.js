@@ -1,13 +1,13 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 const SkillText = () => {
+  const { t } = useTranslation();
   return (
     <div className="flex flex-col items-center justify-center text-white pt-2 sm:pt-40 pb-12 md:pb-0 px-4">
       {/* Заголовок */}
       <div className="relative mb-14 md:mb-44 sm:mb-32 inline-block">
-  <h2 className="text-base md:text-xl sm:text-lg font-bold px-8 md:px-10 sm:px-8 py-3 md:py-5 sm:py-4 border-[3px] border-[#3c3c69] rounded-md bg-gradient-to-r from-[#1A1A40] to-[#0F0F25]">
-    MY SKILLS
-  </h2>
+  <h2 className="text-base md:text-xl sm:text-lg font-bold px-8 md:px-10 sm:px-8 py-3 md:py-5 sm:py-4 border-[3px] border-[#3c3c69] rounded-md bg-gradient-to-r from-[#1A1A40] to-[#0F0F25]">{t("skilltext.mytext")}</h2>
 
   {/* Левая линия */}
   <div className="absolute top-full left-4 w-[3px] h-24 bg-[#3c3c69] hidden lg-min:hidden sm:hidden md:block" />

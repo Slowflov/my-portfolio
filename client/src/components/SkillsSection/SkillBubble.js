@@ -3,8 +3,10 @@ import { FaReact, FaHtml5, FaCss3Alt, FaJsSquare, FaNodeJs, FaGithub } from "rea
 import { SiRedux, SiTailwindcss, SiSass, SiMongodb, SiTypescript, SiNextdotjs } from "react-icons/si";
 import { TbApi } from "react-icons/tb";
 import SvgForFirefox from './SvgForFirefox';
+import { useTranslation } from 'react-i18next';
 
 const SkillBubble = ({ skill, level, size, style, syntaxName, showInfo }) => {
+  const { t } = useTranslation();
   const renderIcon = () => {
     switch (skill) {
       case "React":
@@ -98,7 +100,7 @@ className={`absolute flex items-center justify-center ${bubbleSize} bg-gradient-
         className={`absolute -top-[65px] z-70 left-2/2 transform -translate-x-1/2 w-32 h-14 bg-[#04192e] bg-opacity-80 p-2 flex flex-col items-center justify-start ${showInfo ? "flex" : "hidden"} group-hover:flex clip-path-polygon-[0%_0%,_95%_0%,_100%_100%,_5%_92%] shadow-[0_0_60px_25px_rgba(255,255,255,0.5)]`}
       >
         {/* Текст Level сверху без отступов */}
-        <div className="text-white text-[10px] font-medium text-left w-full">Level</div>
+        <div className="text-white text-[10px] font-medium text-left w-full">{t("skill.level")}</div>
 
         {/* Полоса уровня с числом справа */}
         <div className="flex items-center w-full">
@@ -122,22 +124,3 @@ className={`absolute flex items-center justify-center ${bubbleSize} bg-gradient-
 };
 
 export default SkillBubble;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

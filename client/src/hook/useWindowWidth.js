@@ -20,13 +20,3 @@ const useWindowWidth = () => {
 };
 
 export default useWindowWidth;
-
-
-
-
-
-
-
-
-
-

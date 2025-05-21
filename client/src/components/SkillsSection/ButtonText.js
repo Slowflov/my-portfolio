@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 
 const ButtonText = ({ onClick }) => {
+  const { t } = useTranslation();
   const [isSwapped, setIsSwapped] = useState(false);
 
   const handleClick = () => {
@@ -25,9 +27,9 @@ className={`min-w-[100px] min-h-[20px] lg:min-w-[180px] lg:min-h-[40px] md:min-w
         onClick={handleClick} 
       >
         {/* Текст для больших экранов */}
-        <span className="text-[#caf0f8] text-lg hidden sm:inline">
-          {isSwapped ? 'Show the bubble' : 'Show the text'}
-        </span>
+<span className="text-[#caf0f8] text-lg hidden sm:inline">
+  {isSwapped ? t("buttontext.textbubble") : t("buttontext.textskills")}
+</span>
 
         {/* Полоски для sm и меньших экранов */}
         <div className="flex flex-col space-y-1 sm:hidden">

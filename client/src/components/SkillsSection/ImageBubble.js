@@ -1,4 +1,3 @@
-// src/components/ImageBubble.js
 import React from 'react';
 
 const ImageBubble = ({ src, alt }) => {
