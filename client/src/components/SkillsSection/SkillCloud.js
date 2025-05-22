@@ -13,7 +13,7 @@ const SkillCloud = ({ showInfo }) => {
   };
 
   const skills = [
-    { name: "React", level: 15, size: "large", position: { lg: { top: "11%", left: "78%" }, md: { top: "11%", left: "78%" }, sm: { top: "9%", left: "74%" }, xs: { top: "15%", left: "66%" } }},
+    { name: "React", level: 14, size: "large", position: { lg: { top: "11%", left: "78%" }, md: { top: "11%", left: "78%" }, sm: { top: "9%", left: "74%" }, xs: { top: "15%", left: "66%" } }},
     { name: "HTML", level: 15, size: "small", position: { lg: { top: "29%", left: "69%" }, md: { top: "29%", left: "69%" }, sm: { top: "14%", left: "37%" }, xs: { top: "18%", left: "20%" } }},
     { name: "CSS", level: 14, size: "medium", position: { lg: { top: "45%", left: "14%" }, md: { top: "45%", left: "14%" }, sm: { top: "67%", left: "11%" }, xs: { top: "54%", left: "23%" } }},
     { name: "JavaScript", level: 10, size: "large", position: { lg: { top: "38%", right: "42%" }, md: { top: "38%", right: "42%" }, sm: { top: "39%", right: "38%" }, xs: { top: "47%", right: "25%" } }},
